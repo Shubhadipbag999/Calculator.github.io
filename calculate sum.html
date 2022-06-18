@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculate.css">
+    <title>Calculate sum</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="name">
+            Calculator
+        </div>
+        <div id="calculator">
+            <form name="f">
+        <input type="number" id="first_input" class="num" name="num" placeholder="  Enter First Number: ">
+    </form>
+        <input type="number" id="second_input" class="num" placeholder="  Enter Second Number: ">
+        <input type="text" id="answer" class="num" >
+        <div id="operation">
+            <input type="button" value=" + " id="btn_add" class="op" onclick="addition()">
+            <input type="button" value=" - " id="btn_sub" class="op" onclick="subtraction()">
+            <input type="button" value=" * " id="btn_mul" class="op" onclick="multiplication()">
+            <input type="button" value=" / " id="btn_div" class="op" onclick="division()">
+        </div>
+        <input type="button" value="Clera" id="btn_can" onclick="cancel()">
+    </div>
+    
+    </div>
+    <script>
+        function addition() {
+            // console.log("Button Was Clicked !")
+            document.getElementById("btn_add").style.backgroundColor = "skyblue";
+            document.getElementById("btn_sub").style.backgroundColor = "white";
+            document.getElementById("btn_mul").style.backgroundColor = "white";
+            document.getElementById("btn_div").style.backgroundColor = "white";
+            var a = document.getElementById("first_input").value;
+            var b = document.getElementById("second_input").value;
+            var c = parseFloat(a) + parseFloat(b);
+            // var sp=document.querySelector("span");
+            if (!isNaN(c)) {
+
+                document.getElementById("answer").value = c;
+
+
+                
+            }
+            else {
+                alert("function Was not Working...");
+            }
+        }
+
+        function subtraction() {
+            // console.log("Button Was Clicked !")
+            document.getElementById("btn_add").style.backgroundColor = "white";
+            document.getElementById("btn_sub").style.backgroundColor = "skyblue";
+            document.getElementById("btn_mul").style.backgroundColor = "white";
+            document.getElementById("btn_div").style.backgroundColor = "white";
+            var a1 = document.getElementById("first_input").value;
+            var b1 = document.getElementById("second_input").value;
+            var c1 = parseFloat(a1) - parseFloat(b1);
+            var sp = document.querySelector("span");
+
+            if (!isNaN(c1)) {
+                document.getElementById("answer").value = c1;
+            }
+            else {
+                alert("function Was not Working...");
+
+            }
+            
+        }
+
+        function multiplication() {
+            // console.log("Button Was Clicked !")
+            document.getElementById("btn_add").style.backgroundColor = "white";
+            document.getElementById("btn_sub").style.backgroundColor = "white";
+            document.getElementById("btn_mul").style.backgroundColor = "skyblue";
+            document.getElementById("btn_div").style.backgroundColor = "white";
+            var a2 = document.getElementById("first_input").value;
+            var b2 = document.getElementById("second_input").value;
+            var c2 = parseFloat(a2) * parseFloat(b2);
+            var sp = document.querySelector("span");
+            if (!isNaN(c2)) {
+                document.getElementById("answer").value = c2;
+            }
+            else {
+                alert("function Was not Working...");
+            }
+            
+        }
+
+        function division() {
+            // console.log("Button Was Clicked !")
+            document.getElementById("btn_add").style.backgroundColor = "white";
+            document.getElementById("btn_sub").style.backgroundColor = "white";
+            document.getElementById("btn_mul").style.backgroundColor = "white";
+            document.getElementById("btn_div").style.backgroundColor = "skyblue";
+            var a3 = document.getElementById("first_input").value;
+            var b3 = document.getElementById("second_input").value;
+            var c3 = parseFloat(a3) / parseFloat(b3);
+            var sp = document.querySelector("span");
+            if (!isNaN(c3)) {
+                document.getElementById("answer").value = c3;
+            }
+            else {
+                alert("function Was not Working...");
+            }
+            
+        }
+
+
+        function cancel() {
+            document.getElementById("first_input").value = "";
+            document.getElementById("second_input").value = "";
+            document.getElementById("answer").value = "";
+            document.getElementById("btn_add").style.backgroundColor = "white";
+            document.getElementById("btn_sub").style.backgroundColor = "white";
+            document.getElementById("btn_mul").style.backgroundColor = "white";
+            document.getElementById("btn_div").style.backgroundColor = "white";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

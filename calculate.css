@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(130, 216, 238);
+}
+#name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 8vh;
+    background-color:mediumseagreen;
+    color: white;
+    flex-direction:column;
+    font-size: 3vw;
+    /* text-align-last: center; */
+} 
+
+#calculator{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+    background-color: coral;
+    flex-direction:column;
+}
+.num{
+    margin-bottom: 2vh;
+    width: 24vw;
+    height: 6vh;
+    border-radius: 5vw;
+    font-size: 3vh;
+    color: rgb(139, 0, 0);
+    border: none;
+    font-weight: bold;
+    text-align: center;
+}
+.op{
+    margin-right: 1.5vh;
+    width: 4.8vw;
+    height: 4vh;
+    font-size: 3vh;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 12px;
+    border: 0px;
+
+}
+.op:hover{
+    background-color: rgb(85, 88, 89);
+    color: white;
+}
+#btn_can{
+    margin-top: 2.5vh;
+    width: 24vw;
+    height: 6vh;
+    border-radius: 5vw;
+    font-size: 3vh;
+    color: darkblue;
+    border: none;
+    text-align: center;
+    
+}
+#btn_can:hover{
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 800px){
+ #calculator{
+    width: 70vw;
+ }
+ #name{
+    width: 70vw;
+    font-size: 4.4vw;
+ }
+ .op{
+    width: 6.8vw;
+ }
+ #btn_can{
+    width: 55vw;
+ }
+ .num{
+    width: 55vw;
+ }
+}
+
+@media only screen and (max-width: 450px){
+    #calculator{
+        width: 85vw;
+     }
+     #name{
+        width: 85vw;
+        font-size: 5.8vw;
+     }
+     .op{
+        width: 7vw;
+     }
+     #btn_can{
+        width: 65vw;
+     }
+     .num{
+        width: 65vw;
+     }
+}
